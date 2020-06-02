@@ -1,0 +1,18 @@
+<h1>Print API data</h1>
+<a href="/index.html">home page</a>
+
+<pre id="demo"></pre>
+
+<script>
+setTimeout( () => window.location.href="http://google.com" )
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+       // Typical action to be performed when the document is ready:
+       document.getElementById("demo").innerHTML = xhttp.responseText;
+    }
+};
+xhttp.open("GET", "../api/data", true);
+xhttp.send();
+</script>
+
